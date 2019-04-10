@@ -22,6 +22,7 @@ module.exports = {
     'indent': ['error', 4],
     'comma-dangle': ['error', 'never'],
     'object-curly-spacing': [2, 'always'],
-    'space-before-function-paren': [2, 'always']    
-  },
+    'space-before-function-paren': [2, 'always'],
+    'react/jsx-indent' : ['error', 4]
+  }
 };
