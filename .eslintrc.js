@@ -1,0 +1,27 @@
+module.exports = {
+  env: {
+    browser: true,
+    es6: true,
+  },
+  extends: 'airbnb',
+  globals: {
+    Atomics: 'readonly',
+    SharedArrayBuffer: 'readonly',
+  },
+  parserOptions: {
+    ecmaFeatures: {
+      jsx: true,
+    },
+    ecmaVersion: 2018,
+    sourceType: 'module',
+  },
+  plugins: [
+    'react',
+  ],
+  rules: {
+    'indent': ['error', 4],
+    'comma-dangle': ['error', 'never'],
+    'object-curly-spacing': [2, 'always'],
+    'space-before-function-paren': [2, 'always']    
+  },
+};
