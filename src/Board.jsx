@@ -4,16 +4,40 @@ import Square from './Square';
 
 const Board = (props) => {
     const { squares, onClick } = props;
-    const renderSquare = i => (
-        <Square
-            value={squares[i]}
-            onClick={() => onClick(i)}
-        />
-    );
+
+    const renderSquares = () => {
+        const squaresPerRow = 3;
+        const lenthOfSquares = squares.length;
+        const rows = lenthOfSquares / squaresPerRow;
+        const renderSquare = (i) => {
+            const key = `No.${i} square`;
+
+            return (
+                <Square
+                    key={key}
+                    value={squares[i]}
+                    onClick={() => onClick(i)}
+                />
+            );
+        };
+        const renderResult = [];
+
+        for (let i = 0; i < rows; i += 1) {
+            const key = `No.${i} row`;
+            const rowElement = [];
+            for (let j = 0; j < squaresPerRow; j += 1) {
+                rowElement.push(renderSquare(i * 3 + j));
+            }
+            renderResult.push(<div className="board-row" key={key}>{rowElement}</div>);
+        }
+
+        return renderResult;
+    };
 
     return (
         <div>
-            <div className="board-row">
+            {renderSquares(squares)}
+            {/* <div className="board-row">
                 {renderSquare(0)}
                 {renderSquare(1)}
                 {renderSquare(2)}
@@ -27,7 +51,7 @@ const Board = (props) => {
                 {renderSquare(6)}
                 {renderSquare(7)}
                 {renderSquare(8)}
-            </div>
+            </div> */}
         </div>
     );
 };
