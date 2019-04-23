@@ -1,0 +1,9 @@
+const SELECT_SQUARE = 'SELECT_SQUARE';
+const MOVES_ORDER = 'MOVES_ORDER';
+const GO_TO_MOVE = 'GO_TO_MOVE';
+
+export {
+    SELECT_SQUARE,
+    MOVES_ORDER,
+    GO_TO_MOVE
+};
