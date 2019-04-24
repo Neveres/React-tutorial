@@ -1,11 +1,9 @@
 import { connect } from 'react-redux';
+
 import { actions } from '../state/game';
 import Game from '../views/Game';
 
-const mapStateToProps = (state) => {
-    console.log(state);
-    return state;
-};
+const mapStateToProps = state => state;
 
 const mapDispatchToProps = dispatch => ({
     onSquareClick: (id) => {

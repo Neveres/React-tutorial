@@ -14,13 +14,8 @@ const Square = (props) => {
     );
 };
 
-
-Square.defaultProps = {
-    value: ''
-};
-
 Square.propTypes = {
-    value: PropTypes.string,
+    value: PropTypes.string.isRequired,
     onClick: PropTypes.func.isRequired
 };
 
