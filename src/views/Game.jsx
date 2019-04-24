@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import Board from './Board';
-import calculateWinner from '../utils/game';
+import calculateWinner from '../utils';
 
 class Game extends React.Component {
     render () {

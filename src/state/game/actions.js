@@ -6,7 +6,7 @@ const changeMovesOrder = () => ({ type: types.MOVES_ORDER });
 
 const goToMove = step => ({ type: types.GO_TO_MOVE, step });
 
-export {
+export default {
     selectSquare,
     changeMovesOrder,
     goToMove

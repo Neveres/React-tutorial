@@ -1,7 +1,7 @@
 import reducer from './reducers';
+import actions from './actions';
 
-const gameState = {
-    reducer
+export {
+    reducer,
+    actions
 };
-
-export default gameState;
